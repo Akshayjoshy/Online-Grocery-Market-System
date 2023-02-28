@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>USER LOGIN</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+</head>
+<body style="background-color: #f0f1f9;">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(135deg, #71b7e6, #9b59b6);">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">ONLINE GROCERY MARKET SYSTEM</a>
+		</div>
+	</nav>
+
+	
+	<div class="container p-4">
+		<div class="row">
+			<div>
+				<div class="col-md-8 offset-md-2">
+					<div class="card">
+						<div class="card-body">
+
+							<h4 class="text-center text-dark">LOGIN</h4>
+							
+				
+
+							 <form action="#" th:action="@{/login/home}" th:object="${loginUser}" method="POST"> 
+								<div class="mb-3">
+									<label  class="form-label">
+										USER ID </label> <input type="number" class="form-control"
+										th:field="*{luId}" placeholder="ENTER USER ID" required>
+								</div>
+								<div class="mb-3">
+									<label for="exampleInputPassword1" class="form-label">PASSWORD</label>
+									<input type="password" class="form-control"
+										th:field="*{luPassword}" placeholder="ENTER PASSWORD" required>
+								</div>		
+							<button type="submit" class="btn btn-dark" style="background: linear-gradient(135deg, #71b7e6, #9b59b6);">SIGN IN</button><a th:href = "@{/loginUser/showNewLoginUserForm/guest}"> SignUp</a>
+							
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+</body>
+</html>
